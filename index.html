@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Bootstrap-grid-flexbox by ngengs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Bootstrap-grid-flexbox</h1>
+      <h2 class="project-tagline">Plugins flexbox grid system for bootstrap 3</h2>
+      <a href="https://github.com/ngengs/bootstrap-grid-flexbox" class="btn">View on GitHub</a>
+      <a href="https://github.com/ngengs/bootstrap-grid-flexbox/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/ngengs/bootstrap-grid-flexbox/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="bootstrap-grid-flexbox" class="anchor" href="#bootstrap-grid-flexbox" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bootstrap Grid Flexbox</h1>
+
+<p>Plugins flexbox grid system for bootstrap 3.</p>
+
+<h3>
+<a id="story-behind" class="anchor" href="#story-behind" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Story Behind</h3>
+
+<p>Before that when I developing a website with <a href="http://getbootstrap.com">Bootstrap</a> sometimes I get crazy because the difference height of grid can destroying my layout, so I want to moving to use Flexbox because most modern browser now can support Flexbox (<a href="http://caniuse.com/#feat=flexbox">check here</a>) .</p>
+
+<p>I choose to style the grid not to overide Bootstrap grid but just for add on to Bootstrap or as Plugins. Why?
+Sometimes I still need bootstrap grid, so i chose to not replace bootstrap grid.</p>
+
+<h2>
+<a id="quick-start" class="anchor" href="#quick-start" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Quick start</h2>
+
+<p>Several quick start options are available:</p>
+
+<ul>
+<li>
+<a href="https://github.com/ngengs/bootstrap-grid-flexbox/releases">Download the latest release</a>.</li>
+<li>Clone the repo: <code>git clone --recursive https://github.com/ngengs/bootstrap-grid-flexbox.git</code>.</li>
+</ul>
+
+<h3>
+<a id="whats-included" class="anchor" href="#whats-included" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What's included</h3>
+
+<p>Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:</p>
+
+<pre><code>bootstrap-grid-flexbox/
+├──  dist/
+│   └── css/
+│         ├── bootstrap-grid-flexbox.css
+│         └── bootstrap-grid-flexbox.min.css
+└── less/
+    ├── bootstrap-grid-flexbox.less
+    ├── grid.less
+    ├── mixxins.less
+    └── variables.less
+</code></pre>
+
+<p>The <strong>dist</strong> directory is for compiled css, and you can use that, but if you want build you can use file in <strong>less</strong> directory and compile the <strong><a href="less/bootstrap-grid-flexbox.less">bootstrap-grid-flexbox.less</a></strong></p>
+
+<h2>
+<a id="bugs-and-feature-requests" class="anchor" href="#bugs-and-feature-requests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bugs and feature requests</h2>
+
+<p>Have a bug or a feature request? Please first search for existing and closed issues. If your problem or idea is not addressed yet, <a href="https://github.com/ngengs/bootstrap-grid-flexbox/issues/new">please open a new issue</a>.</p>
+
+<h2>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation</h2>
+
+<p>The documentation is not ready yet.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Add the css after the Bootstrap css</p>
+
+<pre><code>&lt;head&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;
+
+    &lt;!-- Bootstrap Grid Flexbox --&gt;
+    &lt;link href="css/bootstrap-grid-flexbox.min.css" rel="stylesheet"&gt;
+&lt;/head&gt;
+</code></pre>
+
+<p>After that basically you just can use the class for <strong>row</strong> and <strong>col</strong>.</p>
+
+<p>Basically using the grid and row is the same as bootstrap at <a href="http://getbootstrap.com/css/#grid">here</a>, you can use <code>offset</code> <code>pull</code> <code>push</code> and responsive grid like <code>xs</code> <code>sm</code> <code>md</code> <code>lg</code> at <a href="http://getbootstrap.com/css/#grid-options">here</a>.</p>
+
+<p>But I replace <code>row</code> and <code>col</code> with my class preference to avoid overide bootstrap row and grid.
+To use you just replace the <code>.row</code> with <code>.row-flex</code> and <code>.col-</code> with <code>.col-flex-</code></p>
+
+<p>Example:</p>
+
+<pre><code>&lt;div class="row-flex"&gt;
+  &lt;div class="col-flex-md-1"&gt;.col-flex-md-1&lt;br&gt;.col-flex-md-1&lt;/div&gt;
+  &lt;div class="col-flex-md-1"&gt;.col-flex-md-1&lt;/div&gt;
+  &lt;div class="col-flex-md-1"&gt;.col-flex-md-1&lt;/div&gt;
+  &lt;div class="col-flex-md-1"&gt;.col-flex-md-1&lt;/div&gt;
+  &lt;div class="col-flex-md-1"&gt;.col-flex-md-1&lt;/div&gt;
+  &lt;div class="col-flex-md-1"&gt;.col-flex-md-1&lt;/div&gt;
+  &lt;div class="col-flex-md-1"&gt;.col-flex-md-1&lt;/div&gt;
+  &lt;div class="col-flex-md-1"&gt;.col-flex-md-1&lt;/div&gt;
+  &lt;div class="col-flex-md-1"&gt;.col-flex-md-1&lt;/div&gt;
+  &lt;div class="col-flex-md-1"&gt;.col-flex-md-1&lt;/div&gt;
+  &lt;div class="col-flex-md-1"&gt;.col-flex-md-1&lt;/div&gt;
+  &lt;div class="col-flex-md-1"&gt;.col-flex-md-1&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3>
+<a id="improvement" class="anchor" href="#improvement" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Improvement</h3>
+
+<p>Using flexbox we can improve the grid system.</p>
+
+<h4>
+<a id="aligment-grid" class="anchor" href="#aligment-grid" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Aligment Grid</h4>
+
+<p>I add classes to align elements to the start or end of a row as well as the top, bottom, or center of a column.
+And it be like this.</p>
+
+<p><strong>.start-</strong></p>
+
+<pre><code>&lt;div class="row-flex start-xs"&gt;
+    &lt;div class="col-flex-xs-6"&gt;
+        .col-flex-xs-6
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>.center-</strong></p>
+
+<pre><code>&lt;div class="row-flex center-xs"&gt;
+    &lt;div class="col-flex-xs-6"&gt;
+        .col-flex-xs-6
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>.end-</strong></p>
+
+<pre><code>&lt;div class="row-flex end-xs"&gt;
+    &lt;div class="col-flex-xs-6"&gt;
+        .col-flex-xs-6
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>.top-</strong></p>
+
+<pre><code>&lt;div class="row-flex top-xs"&gt;
+    &lt;div class="col-flex-xs-6"&gt;
+        .col-flex-xs-6&lt;br&gt;.col-flex-xs-6
+    &lt;/div&gt;
+    &lt;div class="col-flex-xs-6"&gt;
+        .col-flex-xs-6
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>.middle-</strong></p>
+
+<pre><code>&lt;div class="row-flex middle-xs"&gt;
+    &lt;div class="col-flex-xs-6"&gt;
+        .col-flex-xs-6&lt;br&gt;.col-flex-xs-6
+    &lt;/div&gt;
+    &lt;div class="col-flex-xs-6"&gt;
+        .col-flex-xs-6
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>.bottom-</strong></p>
+
+<pre><code>&lt;div class="row-flex bottom-xs"&gt;
+    &lt;div class="col-flex-xs-6"&gt;
+        .col-flex-xs-6&lt;br&gt;.col-flex-xs-6
+    &lt;/div&gt;
+    &lt;div class="col-flex-xs-6"&gt;
+        .col-flex-xs-6
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>As you see you can add <code>xs</code> <code>md</code> <code>lg</code> to the aligment</p>
+
+<h4>
+<a id="reverse-grid" class="anchor" href="#reverse-grid" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Reverse Grid</h4>
+
+<p>You can reverse the order of grid</p>
+
+<p><strong>.reverse</strong></p>
+
+<pre><code>&lt;div class="row-flex reverse"&gt;
+    &lt;div class="col-flex-xs-4"&gt;
+        1
+    &lt;/div&gt;
+    &lt;div class="col-flex-xs-4"&gt;
+        2
+    &lt;/div&gt;
+    &lt;div class="col-flex-xs-4"&gt;
+        3
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>And because the reverse the grid order will be <strong>3</strong> - <strong>2</strong> - <strong>1</strong>. The <code>.reverse</code> class must use with the <code>.row-flex</code>.</p>
+
+<h2>
+<a id="build" class="anchor" href="#build" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>BUILD</h2>
+
+<p>I use Grunt to build
+1. Install Node.js <a href="https://nodejs.org/en/">download</a>
+2. Install Gruntjs</p>
+
+<pre><code>```
+npm install -g grunt-cli
+```
+</code></pre>
+
+<ol>
+<li>
+<p>Install package from <a href="build">build</a> directory</p>
+
+<pre><code>npm install
+</code></pre>
+</li>
+<li>
+<p>Run build process</p>
+
+<pre><code>grunt dist
+</code></pre>
+</li>
+<li>In the package I add bootstrap as submodule git, you can use variable from bootstrap to compile, If you want that you can open the <strong><a href="less/bootstrap-grid-flexbox.less">less</a></strong> and uncomment line <strong><a href="less/bootstrap-grid-flexbox.less#L7">7</a></strong> and comment line <strong><a href="less/bootstrap-grid-flexbox.less#L13">13</a></strong>
+</li>
+</ol>
+
+<h2>
+<a id="inspired" class="anchor" href="#inspired" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Inspired</h2>
+
+<ul>
+<li><a href="http://getbootstrap.com">Bootstrap</a></li>
+<li><a href="http://flexboxgrid.com/">Flexboxgird</a></li>
+</ul>
+
+<h2>
+<a id="creators" class="anchor" href="#creators" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creators</h2>
+
+<p><strong>Rizky Kharisma</strong></p>
+
+<ul>
+<li><a href="https://twitter.com/ngengs">https://twitter.com/ngengs</a></li>
+<li><a href="https://github.com/ngengs">https://github.com/ngengs</a></li>
+<li><a href="http://ngengs.com">http://ngengs.com</a></li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>Code release under <a href="LICENSE">the MIT license</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/ngengs/bootstrap-grid-flexbox">Bootstrap-grid-flexbox</a> is maintained by <a href="https://github.com/ngengs">ngengs</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
